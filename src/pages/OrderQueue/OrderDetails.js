@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const OrderDetails = ({ match }) => {
   const [quantity, setQuantity] = useState(1);
 
+
   const handleMinus = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -43,7 +44,7 @@ const OrderDetails = ({ match }) => {
                   <Link to="/orderqueue/orderdetails/deliveryaddress" className="update-button">Item Verified</Link>
                 </div>
                 <div className="reject">
-                  <Link className="update-button">Rejected</Link>
+                  <Link to="/orderqueue" className="update-button">Rejected</Link>
                   </div>
               </div>
             </div>
