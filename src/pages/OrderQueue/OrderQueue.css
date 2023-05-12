@@ -1,4 +1,10 @@
-
+.container-ad{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
 .queue-page {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { VscPreview } from "react-icons/vsc";
+import { ImCross } from "react-icons/im";
+import { AiOutlineBars } from "react-icons/ai";
 import MyNavitem from "./MyNavitem";
 import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
@@ -80,7 +82,7 @@ const SideBar = ({ children }) => {
 
           <div className="toggle-sidebar">
             <button onClick={toggleSidebar}>
-              {showSidebar ? "Close" : "Open"}
+              {showSidebar ? <ImCross size="25"/> : <AiOutlineBars size="30"/>}
             </button>
           </div>
 
