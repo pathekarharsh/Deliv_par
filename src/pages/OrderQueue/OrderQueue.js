@@ -44,7 +44,7 @@ const orders = [
 
 const OrderQueue = () => {
   return (
-    <div className="container">
+    <div className="container-ad">
       <div className="main bg-tailtertiary h-screen m-0 p-0">
         <Navbar pagename={<h1>Order Queue</h1>} screenname={<h2>DA103</h2>} />
         <div className="queue-page">
