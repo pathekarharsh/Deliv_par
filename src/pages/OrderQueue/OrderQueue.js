@@ -65,9 +65,6 @@ const OrderQueue = () => {
                   >
                     Details
                   </Link>
-                  <Link to="/orderassign" className="update-button">
-                    Assign
-                  </Link>
                 </div>
               </div>
             ))}
