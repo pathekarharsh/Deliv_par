@@ -81,7 +81,7 @@
   .order-row-title:nth-child(2) {
     text-align: center;
     width: 40%;
-    margin-right: 2rem;
+    margin-left: 4rem;
   }
   
   .order-row-title:last-child {

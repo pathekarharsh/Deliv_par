@@ -6,7 +6,6 @@ import UpdateProfile from "./pages/UpdateProfile";
 import OrderQueue from "./pages/OrderQueue/OrderQueue";
 import OrderDetails from "./pages/OrderQueue/OrderDetails";
 import DeliveryAddress from "./pages/OrderQueue/DeliveryAddress";
-import Assign from "./pages/OrderAssign/Assign";
 
 Modal.setAppElement("#root");
 
@@ -17,7 +16,6 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<SideBar />}>
-          <Route exacy path="/orderassign" element={<Assign />} />
             <Route exact path="profile" element={<Profile />} />
             <Route exact path="profile/updateprofile" element={<UpdateProfile />} />
             <Route exact path="/orderqueue" element={<OrderQueue />} />
