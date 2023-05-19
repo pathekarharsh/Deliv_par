@@ -137,14 +137,17 @@
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 5px;
+    width: 80%;
   }
   
   .order-card h2 {
     margin: 0.5rem;
+
   }
   
   .order-card p {
     margin: 0.5rem;
+    padding: 1rem;
   }
   
   .btn {
@@ -152,6 +155,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
     width: 100%;
   }
   
