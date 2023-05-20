@@ -2,6 +2,7 @@ import React from "react";
 import { FaMotorcycle } from "react-icons/fa";
 import "./DeliveryAddress.css";
 import Navbar from "../../components/Navbar";
+import { Link } from "react-router-dom";
 
 const DeliveryAddress = () => {
   const deliveryAddress = {
@@ -83,12 +84,12 @@ const DeliveryAddress = () => {
                       <span className="delivery-slot-value">
                         {deliverySlot.time}
                       </span>
-                      <button
+                      <Link to="/orderqueue/orderdetails/deliveryaddress/changeslot"
                         className="update-button"
                         onClick={handleChangeSlot}
                       >
                         Change
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
