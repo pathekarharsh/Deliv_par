@@ -1,8 +1,18 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const deliveryAgentsController = require('../controllers/deliveryAgentsControllers.js');
+// const { updateStock } = require("../controller/deliveryAgentsController");
+const { getAllProducts } = require("../controller/DeliveryAgentController");
+const { createOrder } = require("../controller/DeliveryAgentController");
+// const { getOrderDetails } = require("../controller/DeliveryAgentController");
+// const { createOrder } = require("../controller/deliveryAgentsController");
+//const { getStock } = require("../controller/inventoryController");
 
-// Update a delivery agent's profile
-router.put('/:id', deliveryAgentsController.update);
+// router.post("/inventory/:id", updateStock);
+router.get("/orders", getAllProducts);
+router.post("/orders", createOrder);
+// router.post()
+// router.get("/orders/:id", getOrderDetails);
+// router.post("/orders", createOrder);
+// router.get("/inventory", getStock);
 
 module.exports = router;

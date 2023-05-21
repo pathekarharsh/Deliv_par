@@ -1,19 +1,22 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const deliveryAgentsRoutes = require('./routes/deliveryAgentsRoutes.js');
-
+const express = require("express");
 const app = express();
+const cors = require("cors");
+const port = 5011;
+const db = require("./config/db");
+const inventoryRoutes = require("./routes/deliveryAgentsRoutes");
 
-// Enable CORS
+// Middlewares
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Enable JSON parsing
-app.use(bodyParser.json());
+// Routes
+app.use("/api", require("./routes/deliveryAgentsRoutes"));
+app.use("/api", inventoryRoutes);
 
-// Delivery agents routes
-app.use('/api/delivery-agents', deliveryAgentsRoutes);
+// app.use("/api", require("./routes/inventoryRoutes"));
 
 // Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
