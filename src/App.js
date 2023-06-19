@@ -6,6 +6,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 import OrderQueue from "./pages/OrderQueue/OrderQueue";
 import OrderDetails from "./pages/OrderQueue/OrderDetails";
 import DeliveryAddress from "./pages/OrderQueue/DeliveryAddress";
+import ChangeSlot from "./pages/OrderQueue/ChangeSlot";
 
 Modal.setAppElement("#root");
 
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/orderqueue" element={<OrderQueue />} />
             <Route exact path="/orderqueue/orderdetails" element={<OrderDetails />} />
             <Route exact path="/orderqueue/orderdetails/deliveryaddress" element={<DeliveryAddress />} />
+            <Route exact path="/orderqueue/orderdetails/deliveryaddress/changeslot" element={<ChangeSlot />} />
           </Route>
         </Routes>
       </Router>

@@ -8,15 +8,7 @@ const OrderDetails = ({ match }) => {
   const [quantity, setQuantity] = useState(1);
 
 
-  const handleMinus = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
 
-  const handlePlus = () => {
-    setQuantity(quantity + 1);
-  };
 
   return (
     <div className="container">
@@ -33,11 +25,6 @@ const OrderDetails = ({ match }) => {
               <h3>Tomato</h3>
               <p>Quantity: {quantity} Kg</p>
               <p>Price: Rs.31</p>
-              <div className="quantity-controls">
-                <FaMinusCircle onClick={handleMinus} className="control-icon" />
-                <p className="card-quantity">{quantity}</p>
-                <FaPlusCircle onClick={handlePlus} className="control-icon" />
-              </div>
               <div>
                 <div className="verified">
                   <Link to="/orderqueue/orderdetails/deliveryaddress" className="update-button">Quantity Verified</Link>

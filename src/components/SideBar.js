@@ -60,14 +60,11 @@ const SideBar = ({ children }) => {
                   PROFILE
                 </button>
                 <button
-  className="ml-2 py-2 bg-tailtertiary hover:bg-red-600 w-full rounded-sm"
-  onClick={() => {
-    window.location.href = "https://baseapm.onrender.com/";
-  }}
->
-  LOGOUT
-</button>
-
+                  className="ml-2 py-2 bg-tailtertiary hover:bg-red-600 w-full rounded-sm"
+                  onClick={() => navigate("/logout")}
+                >
+                  LOGOUT
+                </button>
               </div>
             </div>
 
@@ -86,16 +83,13 @@ const SideBar = ({ children }) => {
 
           <div className="toggle-sidebar">
             <button onClick={toggleSidebar}>
-              {showSidebar ? <ImCross size="25" /> : <AiOutlineBars size="30" />}
+              {showSidebar ? <ImCross size="25"/> : <AiOutlineBars size="30"/>}
             </button>
           </div>
 
-          <main className={`main-content ${showSidebar ? "sidebar-open" : ""}`}>
-            {/* Content for the background screen */}
-            <div className="major-container">
-              <Header screenname={<h2>DP 101</h2>} />
-            </div>
-
+          <main
+            className={`main-content ${showSidebar ? "sidebar-open" : ""}`}
+          >
             {children}
           </main>
         </div>
