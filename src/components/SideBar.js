@@ -7,6 +7,7 @@ import MyNavitem from "./MyNavitem";
 import { useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import "./SideBar.css";
+import Header from "./Header";
 
 const SideBar = ({ children }) => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const SideBar = ({ children }) => {
         <div className="main-container">
           <motion.div
             animate={{
-              width: showSidebar ? "270px" : "0px",
+              width: showSidebar ? "100%" : "0px",
               height: "100vh",
             }}
             className={`sidebar `}
@@ -59,11 +60,14 @@ const SideBar = ({ children }) => {
                   PROFILE
                 </button>
                 <button
-                  className="ml-2 py-2 bg-tailtertiary hover:bg-red-600 w-full rounded-sm"
-                  onClick={() => navigate("/logout")}
-                >
-                  LOGOUT
-                </button>
+  className="ml-2 py-2 bg-tailtertiary hover:bg-red-600 w-full rounded-sm"
+  onClick={() => {
+    window.location.href = "https://baseapm.onrender.com/";
+  }}
+>
+  LOGOUT
+</button>
+
               </div>
             </div>
 
@@ -82,13 +86,16 @@ const SideBar = ({ children }) => {
 
           <div className="toggle-sidebar">
             <button onClick={toggleSidebar}>
-              {showSidebar ? <ImCross size="25"/> : <AiOutlineBars size="30"/>}
+              {showSidebar ? <ImCross size="25" /> : <AiOutlineBars size="30" />}
             </button>
           </div>
 
-          <main
-            className={`main-content ${showSidebar ? "sidebar-open" : ""}`}
-          >
+          <main className={`main-content ${showSidebar ? "sidebar-open" : ""}`}>
+            {/* Content for the background screen */}
+            <div className="major-container">
+              <Header screenname={<h2>DP 101</h2>} />
+            </div>
+
             {children}
           </main>
         </div>
